@@ -31,15 +31,23 @@ This project runs on a **Raspberry Pi Pico W (2W)** and automates plant monitori
 
 ## 🔌 Wiring Diagram
 Here’s the wiring for the Raspberry Pi Pico W setup:
+- DHT22 on GPIO15  
+- Soil sensor on ADC1 (heater on GPIO21)  
+- Pump via motor driver (IN1=GPIO0, IN2=GPIO1, ENA=GPIO2)
 
-![Wiring Diagram](fritiz_project_bb.png)
+<!-- Use HTML to scale the image on GitHub -->
+<p align="center">
+  <img src="fritiz_project_bb.png" alt="Wiring Diagram" width="600">
+</p>
 
 ## 📡 Configuration
 Edit `main.py` and set your Wi-Fi and ThingSpeak API key:
+
 ```python
 SSID = "YOUR_WIFI_NAME"
 PASSWORD = "YOUR_WIFI_PASSWORD"
 API_KEY = "YOUR_THINGSPEAK_API_KEY"
+```
 
 ## 📄 Warranty and License
 Free to use and modify. 
